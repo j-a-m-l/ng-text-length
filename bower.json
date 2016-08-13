@@ -1,0 +1,28 @@
+{
+  "name": "ng-text-length",
+  "version": "0.0.0",
+  "description": "Angular.js pure text (without HTML) length validator",
+  "homepage": "https://github.com/j-a-m-l/ng-text-length",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/j-a-m-l/ng-text-length.git"
+  },
+  "keywords": [
+    "angular"
+  ],
+  "main": "ng-text-length.js",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test"
+  ],
+  "dependencies": {
+    "angular": "^1.5.0"
+  },
+  "devDependencies": {
+    "angular-mocks": "^1.5.0"
+  },
+  "authors": ["Juan A. Martín Lucas"],
+  "license": "MIT"
+}
