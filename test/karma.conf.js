@@ -32,8 +32,6 @@ module.exports = function(config) {
 
     // list of files / patterns to load in the browser (the order matters)
     files: [
-      // '../node_modules/karma-babel-preprocessor/node_modules/babel-core/browser-polyfill.js',
-
       '../bower_components/angular/angular.js',
       '../bower_components/angular-mocks/angular-mocks.js',
 

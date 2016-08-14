@@ -21,6 +21,7 @@
     "sinon-chai": "^2.8.0"
   },
   "scripts": {
+    "start": "node_modules/karma/bin/karma start test/karma.conf.js",
     "test": "node_modules/karma/bin/karma start test/karma.conf.js --single-run"
   },
   "authors": [
