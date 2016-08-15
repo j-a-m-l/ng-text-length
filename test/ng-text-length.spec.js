@@ -84,4 +84,49 @@ describe('ng-text-length', ()=> {
     })
   })
 
+  describe('maxTextLength', ()=> {
+
+    it('treats "undefined" values as empty', ()=> {
+      compile(fieldTemplate(null, 0, undefined))
+      expect($scope.testForm.field.$valid).to.be.true
+      compile(fieldTemplate(null, 1, undefined))
+      expect($scope.testForm.field.$valid).to.be.true
+    })
+
+    it('treats "null" values as empty', ()=> {
+      compile(fieldTemplate(null, 0, null))
+      expect($scope.testForm.field.$valid).to.be.true
+      compile(fieldTemplate(null, 1, null))
+      expect($scope.testForm.field.$valid).to.be.true
+    })
+
+    it('is valid when the text of a textual ngModel is shorter or equal than the maximum', ()=> {
+      compile(fieldTemplate(null, 3))
+      expect($scope.testForm.field.$valid).to.be.true
+
+      compile(fieldTemplate(null, 3, 'a'))
+      expect($scope.testForm.field.$valid).to.be.true
+
+      compile(fieldTemplate(null, 3, 'aaa'))
+      expect($scope.testForm.field.$valid).to.be.true
+
+      compile(fieldTemplate(null, 3, 'aaaa'))
+      expect($scope.testForm.field.$valid).to.be.false
+    })
+
+    it('is valid when the text of an HTML ngModel is shorter or equal than the maximum', ()=> {
+      compile(fieldTemplate(null, 3, '<a></a>'))
+      expect($scope.testForm.field.$valid).to.be.true
+
+      compile(fieldTemplate(null, 3, '<a>a</a>'))
+      expect($scope.testForm.field.$valid).to.be.true
+
+      compile(fieldTemplate(null, 3, '<a>aaa</a>'))
+      expect($scope.testForm.field.$valid).to.be.true
+
+      compile(fieldTemplate(null, 3, '<a>aaaa</a>'))
+      expect($scope.testForm.field.$valid).to.be.false
+    })
+  })
+
 })

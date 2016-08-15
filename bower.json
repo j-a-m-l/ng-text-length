@@ -1,6 +1,6 @@
 {
   "name": "ng-text-length",
-  "version": "0.0.0",
+  "version": "0.8.0",
   "description": "Angular.js pure text (without HTML) length validator",
   "homepage": "https://github.com/j-a-m-l/ng-text-length",
   "repository": {
