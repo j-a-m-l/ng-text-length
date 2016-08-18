@@ -20,10 +20,10 @@ Include the source file in your HTML:
 <script src="bower_components/ng-text-length/ng-text-length.js"></script>
 ```
 
-Add the module `ngTextLength` as a dependency to your app module:
+Add the module `textLength` as a dependency to your app module:
 
 ```js
-var app = angular.module('example', ['ngTextLength']);
+var app = angular.module('example', ['textLength']);
 ```
 
 Now, any form component can use both directives:

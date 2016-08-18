@@ -1,7 +1,7 @@
 (function(angular) {
   'use strict';
 
-  var app = angular.module('ngTextLength', []);
+  var app = angular.module('textLength', []);
 
   // Strings that are not wrapped as HTML provoke that jqLite treats them as CSS selectors
   function getText(viewValue) {

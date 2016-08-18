@@ -1,11 +1,12 @@
 describe('ng-text-length', ()=> {
 
+  const moduleName = 'textLength'
   let app = null
     , $compile = null
     , $rootScope = null
     , $scope = null
 
-  beforeEach(module('ngTextLength'))
+  beforeEach(module(moduleName))
 
   beforeEach( ()=> {
     inject( (_$compile_, _$rootScope_)=> {
@@ -33,7 +34,7 @@ describe('ng-text-length', ()=> {
   }
 
   describe('module', ()=> {
-    beforeEach( ()=> app = angular.module('ngTextLength') )
+    beforeEach( ()=> app = angular.module(moduleName) )
 
     it('is defined', ()=> expect(app).to.exist )
     it('does not have any dependency', ()=> expect(app.value('appName').requires).to.be.empty )
