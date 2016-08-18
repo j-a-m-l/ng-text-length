@@ -6,7 +6,7 @@ This module includes 2 directives that are intended to evaluate the length of th
 
 ## Installation
 
-Via Bower:
+Via Bower (TODO):
 
 ```shell
 bower install ng-text-length
